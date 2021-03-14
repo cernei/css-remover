@@ -43,7 +43,6 @@ class Css {
             }
         };
         $replaced =  preg_replace_callback("/([^{}\/]+)\s+{[^{}]+}/", $replaceFn, $input);
-        file_put_contents('./output/'. substr(md5($mediaName), 0, 5).'.txt', $log);
         return $replaced;
     }
 
