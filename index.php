@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include "config.php";
-include "lib2.php";
+include "lib.php";
 $i = 0;
 
 $coverageFile = file_get_contents(Config::COVERAGE_FILENAME);

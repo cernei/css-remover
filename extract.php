@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include "config.php";
-include "lib2.php";
+include "lib.php";
 $i = 0;
 
 function parseCovered($item): array
@@ -25,7 +25,8 @@ function parseCovered($item): array
 
     return $result;
 }
-$coverageFile = file_get_contents('./63.4%.json');
+
+$coverageFile = file_get_contents('./input.json');
 $cssItem = Coverage::getCssItem($coverageFile);
 $covered = parseCovered($cssItem);
 $content = '@charset "UTF-8";' . "\n";
